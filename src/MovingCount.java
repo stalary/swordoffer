@@ -16,7 +16,7 @@ public class MovingCount {
 
     /**
      * 要判断能够走多少个格子
-     * 首先需要一个boolean数组记录已经走过的点，然后通过回溯法向四个方向进行移动
+     * 首先需要一个boolean数组记录已经走过的点，然后向四个方向进行遍历
      */
     public int movingCount(int threshold, int rows, int cols) {
         // 申请一个记录已经走过的点的数组
