@@ -25,7 +25,7 @@ public class IsNumeric {
         if (str == null || str.length == 0) {
             return false;
         }
-        // 首先先判断一次字符串能否直接被判断为数值
+        // 首先先判断一次字符串能否直接被判断为数值，即找到非数值的点
         boolean flag = scanInteger(str);
         // 如果出现小数点，则判断小数点之后是不是无符号数值
         if (index < str.length && str[index] == '.') {
