@@ -14,6 +14,7 @@
  */
 public class DeleteDuplication {
 
+
     public ListNode deleteDuplication(ListNode head) {
         // 当仅有一个结点时，不会存在重复元素，直接返回
         if (head == null || head.next == null) {
