@@ -9,8 +9,9 @@ import java.util.Arrays;
 
 /**
  * IsContinuous
- *
+ * <p>
  * 判断是不是扑克牌的顺子，大小王可以当作任意的牌，大小王为0
+ *
  * @author lirongqian
  * @since 2018/02/04
  */
@@ -18,10 +19,11 @@ public class IsContinuous {
 
     /**
      * 首先排序，统计出0的数量，然后判断是否有非0的重复元素，然后判断相差的元素的数量是否小于0
+     *
      * @param numbers
      * @return
      */
-    public boolean isContinuous(int [] numbers) {
+    public boolean isContinuous(int[] numbers) {
         if (numbers == null || numbers.length == 0) {
             return false;
         }
@@ -48,7 +50,7 @@ public class IsContinuous {
             if (numbers[index] == numbers[index + 1]) {
                 return false;
             }
-            if (numbers[index] + 1 +zero >= numbers[index + 1]) {
+            if (numbers[index] + 1 + zero >= numbers[index + 1]) {
                 zero = zero - (numbers[index + 1] - numbers[index] - 1);
             } else {
                 return false;
