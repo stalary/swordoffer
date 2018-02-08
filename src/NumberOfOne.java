@@ -15,11 +15,7 @@
  */
 public class NumberOfOne {
 
-    public static void main(String[] args) {
-        System.out.println(new NumberOfOne().getOne(1231));
-    }
-
-    public int NumberOf1Between1AndN_Solution1(int n) {
+    public int NumberOf1Between1AndN_Solution(int n) {
         // 1的个数
         int count = 0;
         // 当前位
@@ -48,22 +44,4 @@ public class NumberOfOne {
         return count;
     }
 
-    public int NumberOf1Between1AndN_Solution(int n) {
-        int sum = 0;
-        for (int i = 1; i <= n; i++) {
-            sum += getOne(i);
-        }
-        return sum;
-    }
-
-    public int getOne(int num) {
-        int count = 0;
-        while (num > 0) {
-            if (num % 10 == 1) {
-                count++;
-            }
-            num = num / 10;
-        }
-        return count;
-    }
 }
