@@ -10,6 +10,7 @@
  * <p>
  * 计算逆序对的数量，前面数字大于后面的数字，即代表一个逆序对
  *
+ * 难度较大
  * @author lirongqian
  * @since 2018/02/07
  */
@@ -42,6 +43,7 @@ public class InversePairs {
         int leftCount = InversePairsCore(array, copy, low, mid) % 1000000007;
         int rightCount = InversePairsCore(array, copy, mid + 1, high) % 1000000007;
         int count = 0;
+        // 设置左侧数组范围为i，右侧数组范围为j
         int i = mid;
         int j = high;
         int locCopy = high;
@@ -65,6 +67,7 @@ public class InversePairs {
         for (; j > mid; j--) {
             copy[locCopy--] = array[j];
         }
+        // 将元素放回原数组，完成排序
         for (int s = low; s <= high; s++) {
             array[s] = copy[s];
         }
