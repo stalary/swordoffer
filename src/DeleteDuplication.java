@@ -22,6 +22,7 @@ public class DeleteDuplication {
         }
         // 当前结点和下个结点相等时，找到下一个不相等的结点，递归进行删除，注意要保存当前结点，防止链表断开
         if (head.val == head.next.val) {
+            // 保存head结点的下一个结点，防止结点断开
             ListNode node = head.next;
             // 直到下一个结点不等于头结点
             while (node != null && node.val == head.val) {
