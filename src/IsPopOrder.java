@@ -29,12 +29,15 @@ public class IsPopOrder {
         int popIndex = 0;
         Stack<Integer> stack = new Stack<>();
         for (int in : pushA) {
+            // 将输入元素压入栈中
             stack.push(in);
+            // 当第一个元素和输出元素相同时，则弹出
             while (!stack.empty() && stack.peek() == popA[popIndex]) {
                 stack.pop();
                 popIndex++;
             }
         }
+        // 当栈为空时，则代表符合条件
         return stack.empty();
     }
 }
