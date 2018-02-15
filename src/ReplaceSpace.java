@@ -1,7 +1,8 @@
 /**
  * ReplaceSpace
- *
+ * <p>
  * 替换空格
+ *
  * @author lirongqian
  * @since 2018/02/15
  */
@@ -9,6 +10,7 @@ public class ReplaceSpace {
 
     /**
      * 如何直接使用正则表达式替换速度会很慢，所以首先计算出空格的数量，从末尾进行替换
+     *
      * @param str
      * @return
      */
@@ -39,5 +41,18 @@ public class ReplaceSpace {
             }
         }
         return str.toString();
+    }
+
+    public String replaceSpace1(StringBuffer str) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c == ' ') {
+                sb.append("%20");
+            } else {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
     }
 }
