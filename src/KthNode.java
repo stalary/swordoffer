@@ -22,6 +22,7 @@ public class KthNode {
         if (pRoot != null) {
             // 找到最左的结点
             TreeNode node = KthNode(pRoot.left, k);
+            // 如果node不为空，则代表找到了第k个结点
             if (node != null) {
                 return node;
             }
