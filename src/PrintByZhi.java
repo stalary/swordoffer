@@ -20,8 +20,19 @@ import java.util.Stack;
  */
 public class PrintByZhi {
 
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(8);
+        root.left = new TreeNode(6);
+        root.right = new TreeNode(10);
+        root.left.left = new TreeNode(5);
+        root.left.right = new TreeNode(7);
+        root.right.left = new TreeNode(9);
+        root.right.right = new TreeNode(11);
+        System.out.println("stack: " + new PrintByZhi().Print(root));
+    }
     /**
-     * 按之字型打印二叉树，使用两个栈，一个存储奇数的层，一个存储偶数的层
+     * 按之字型打印二叉树，使用两个栈，一个存储奇数的层，一个存储偶数的层，队列无法实现，队列无法实现内部顺序倒置
      * @param root
      * @return
      */
