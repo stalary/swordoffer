@@ -29,14 +29,17 @@ public class VerifySquenceOfBST {
         if (sequence == null || sequence.length == 0) {
             return false;
         }
+        // 后续遍历根为最后一个元素
         int root = sequence[end - 1];
         int i;
+        // 因为是二叉搜索树，所以找到比根大的元素下标即为右子树
         for (i = 0; i < end - 1; i++) {
             if (sequence[i] > root) {
                 break;
             }
         }
         int j;
+        // 右子树中如果存在比根小的，即不符合要求
         for (j = i; j < end - 1; j++) {
             if (sequence[j] < root) {
                 return false;
@@ -44,12 +47,15 @@ public class VerifySquenceOfBST {
         }
         boolean left = true;
         if (i > 0) {
+            // 递归判断左子树
             left = help(sequence, start, i);
         }
         boolean right = true;
         if (i < end - 1) {
+            // 递归判断右子树
             right = help(sequence, start + i, end - 1);
         }
+        // 当左右子树都满足时返回true
         return left && right;
     }
 }
