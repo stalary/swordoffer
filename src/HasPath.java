@@ -1,9 +1,3 @@
-/**
- * @(#)HasPath.java, 2018-01-30.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 /**
  * HasPath
