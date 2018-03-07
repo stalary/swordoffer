@@ -1,9 +1,3 @@
-/**
- * @(#)Duplicate.java, 2018-02-04.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 import java.util.HashSet;
 import java.util.Set;
