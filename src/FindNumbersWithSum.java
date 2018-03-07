@@ -1,9 +1,3 @@
-/**
- * @(#)FindNumbersWithSum.java, 2018-02-06.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 import java.util.ArrayList;
 import java.util.HashSet;
