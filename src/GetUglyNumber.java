@@ -1,12 +1,3 @@
-/**
- * @(#)GetUglyNumber.java, 2018-02-08.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * GetUglyNumber
@@ -19,33 +10,26 @@ import java.util.List;
  */
 public class GetUglyNumber {
 
-    public int GetUglyNumber_Solution(int n) {
-        if (n <= 0) {
-            return 0;
+    public int GetUglyNumber_Solution(int index) {
+        if (index < 7) {
+            return index;
         }
-        List<Integer> list = new ArrayList<>();
-        // 先加入最小的丑数1
-        list.add(1);
-        int i2 = 0, i3 = 0, i5 = 0;
-        while (list.size() < n) {
-            // 找到下一个最小的丑数
-            int m2 = list.get(i2) * 2;
-            int m3 = list.get(i3) * 3;
-            int m5 = list.get(i5) * 5;
-            int min = Math.min(m2, Math.min(m3, m5));
-            list.add(min);
-            // 存入最小值时，将对应的个数++
-            if (min == m2) {
-                i2++;
+        int[] res = new int[index];
+        res[0] = 1;
+        int t2 = 0, t3 = 0, t5 = 0, i;
+        for (i = 1; i < index; ++i)
+        {
+            res[i] = Math.min(res[t2] * 2, Math.min(res[t3] * 3, res[t5] * 5));
+            if (res[i] == res[t2] * 2) {
+                t2++;
             }
-            if (min == m3) {
-                i3++;
+            if (res[i] == res[t3] * 3) {
+                t3++;
             }
-            if (min == m5) {
-                i5++;
+            if (res[i] == res[t5] * 5) {
+                t5++;
             }
         }
-        // 因为n是从1开始
-        return list.get(n - 1);
+        return res[index - 1];
     }
 }
