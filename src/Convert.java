@@ -1,11 +1,3 @@
-/**
- * @(#)Convert.java, 2018-02-09.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
-
-import java.util.Stack;
 
 /**
  * Convert
@@ -45,6 +37,7 @@ public class Convert {
             root.left = p;
         }
         // 4.将右子树构造成双链表，并返回链表头节点
+        // 因为根结点直接与左结点相连接，所以无需再进行查找第一个结点
         TreeNode right = Convert(root.right);
         // 5.如果右子树链表不为空的话，将该链表追加到root节点之后
         if (right != null) {
