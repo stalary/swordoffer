@@ -1,9 +1,3 @@
-/**
- * @(#)Add.java, 2018-02-03.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 /**
  * Add
@@ -20,12 +14,13 @@ public class Add {
     public int add(int num1,int num2) {
         //  当没有进位的时输出
         while (num2 != 0) {
-            // 求出未进位时的数
+            // 找出无需进位的数　
             int temp = num1 ^ num2;
-            // num2为进位
+            // num2为进位，当两个数字的某位都为1时，需要向前进位，左移一位
             num2 = (num1 & num2) << 1;
             num1 = temp;
         }
         return num1;
     }
+
 }
