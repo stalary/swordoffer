@@ -1,11 +1,4 @@
 /**
- * @(#)InversePairs.java, 2018-02-07.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
-
-/**
  * InversePairs
  * <p>
  * 计算逆序对的数量，前面数字大于后面的数字，即代表一个逆序对
