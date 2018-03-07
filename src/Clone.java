@@ -1,9 +1,3 @@
-/**
- * @(#)Clone.java, 2018-02-10.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 /**
  * Clone
@@ -37,7 +31,7 @@ public class Clone {
         currentNode = pHead;
         // 然后重新遍历链表，复制老结点的随机指针给新结点，如A1.random = A.random.next;
         while (currentNode != null) {
-            // 将当前结点的随机指针赋值给复制结点，当随机结点不为空时，则移动到随机结点的下一个
+            // 将当前结点的随机指针赋值给复制结点(复制结点位当前结点的下一个结点)，当随机结点不为空时，则移动到随机结点的下一个
             currentNode.next.random = currentNode.random == null ? null : currentNode.random.next;
             // 当前结点移动到下一个原结点
             currentNode = currentNode.next.next;
