@@ -1,9 +1,3 @@
-/**
- * @(#)NumberOfOne.java, 2018-02-08.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 /**
  * NumberOfOne
@@ -18,7 +12,7 @@ public class NumberOfOne {
     public int NumberOf1Between1AndN_Solution(int n) {
         // 1的个数
         int count = 0;
-        // 当前位
+        // 初始化
         int i = 1;
         int current, after, before;
         while ((n / i) != 0) {
