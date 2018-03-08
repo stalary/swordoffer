@@ -1,9 +1,3 @@
-/**
- * @(#)TreeNode.java, 2018-01-31.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 /**
  * TreeNode
