@@ -35,7 +35,7 @@ public class FindContinuousSequence {
                 small++;
                 big++;
             }
-            // 当小于sum时，删除增加一个元素
+            // 当小于sum时, 增加一个元素
             if (result < sum) {
                 big++;
             } else {
