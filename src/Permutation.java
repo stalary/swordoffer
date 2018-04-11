@@ -18,9 +18,15 @@ public class Permutation {
      *            abc
      *    abc     bac      cba
      * abc  cba bac bca  cba  cab
-     * @param str
+     * @param
      * @return
      */
+
+    public static void main(String[] args) {
+        String str = new String("159");
+        System.out.println(new Permutation().Permutation(str));
+    }
+
     public ArrayList<String> Permutation(String str) {
         ArrayList<String> list = new ArrayList<>();
         if (str == null || str.length() <= 0) {
