@@ -11,7 +11,7 @@ public class Find {
     public boolean Find(int target, int[][] array) {
         int row = 0;
         int col = array[0].length - 1;
-        while (col >= 0 && row < array[0].length) {
+        while (col >= 0 && row < array.length) {
             if (target < array[row][col]) {
                 col--;
             } else if (target > array[row][col]) {
