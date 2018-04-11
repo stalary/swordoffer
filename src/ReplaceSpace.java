@@ -8,6 +8,10 @@
  */
 public class ReplaceSpace {
 
+    public static void main(String[] args) {
+        System.out.println(new ReplaceSpace().replaceSpace1(new StringBuffer("We Are Happy")));
+    }
+
     /**
      * 如何直接使用正则表达式替换速度会很慢，所以首先计算出空格的数量，从末尾进行替换
      *
