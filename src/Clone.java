@@ -14,6 +14,7 @@ public class Clone {
             return pHead;
         }
         RandomListNode currentNode = pHead;
+        // 首先将克隆结点插入到下一个结点
         // 首先复制每个结点，并将每个复制的结点添加到每个结点的后面
         while (currentNode != null) {
             // 创建复制的结点
