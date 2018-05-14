@@ -9,6 +9,17 @@
  */
 public class Convert {
 
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(8);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(11);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(7);
+        root.right.left = new TreeNode(9);
+        root.right.right = new TreeNode(12);
+        System.out.println(new Convert().Convert(root));
+    }
+
     /**
      *              8
      *         5          11            --->  3 5 7 8 9 11 12  即将左子树的最后一个结点和根结点相连，根节点与右子树的第一个结点相连
@@ -33,6 +44,7 @@ public class Convert {
         }
         // 3.如果左子树链表不为空的话，将当前root追加到左子树链表(即将左子树的最右结点与root相连)
         if (left != null) {
+            //例如 3.right=5, 5.left=3
             p.right = root;
             root.left = p;
         }
@@ -41,6 +53,7 @@ public class Convert {
         TreeNode right = Convert(root.right);
         // 5.如果右子树链表不为空的话，将该链表追加到root节点之后
         if (right != null) {
+            // 7.left=5, 5.right=7
             right.left = root;
             root.right = right;
         }
