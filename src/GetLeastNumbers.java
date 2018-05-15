@@ -13,10 +13,12 @@ import java.util.PriorityQueue;
 public class GetLeastNumbers {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{
-                4, 5, 1, 6, 2, 7, 3, 8
-        };
-        System.out.println(new GetLeastNumbers().GetLeastNumbers_Solution(arr, 4));
+        int a[] = {2, 4, 3, 7, 9, 1, 17, 18, 0, 20};
+        int k = 6;
+        new GetLeastNumbers().getTopKMinBySort(a, 0, a.length - 1, k);
+        for (int i = 0; i < k; i++) {
+            System.out.print(a[i] + " ");
+        }
     }
 
     /**
@@ -47,34 +49,44 @@ public class GetLeastNumbers {
         return result;
     }
 
+
     /**
-     * 循环k次，每次保留上一次的最小值，并且下一次筛选最小值时要比上一次的大
-     * @param input
-     * @param k
+     * 使用快速排序过程法
+     * i > k - 1时,向左移动继续缩小范围
+     * i < k - 1时，开始向右移动，增加
+     * @param a
+     * @param first
+     * @param end
      * @return
      */
-    public ArrayList<Integer> GetLeastNumbers_Solution1(int[] input, int k) {
-        ArrayList<Integer> result = new ArrayList<>();
-        if (input == null || input.length < k || k == 0) {
-            return result;
-        }
-        // 上一次的最小值
-        int temp = Integer.MIN_VALUE;
-        for (int i = 0; i < k; i++) {
-            // 当前的最小值
-            int min = Integer.MAX_VALUE;
-            for (int j : input) {
-                // 只有当前值小于当前最小值并大于上一次最小值时才更新最小值
-                if (j < min && j > temp) {
-                    min = j;
-                }
+    int partition(int a[], int first, int end) {
+        int i = first;
+        int key = a[end];
+        for (int j = first; j < end; j++) {
+            if (a[j] < key) {
+                int temp = a[j];
+                a[j] = a[i];
+                a[i] = temp;
+                i++;
             }
-            // 更新上一次的最小值
-            temp = min;
-            // 将当前最小值加入
-            result.add(min);
         }
-        return result;
+        a[end] = a[i];
+        a[i] = key;
+        System.out.println(i);
+        return i;
+    }
+
+    void getTopKMinBySort(int a[], int first, int end, int k) {
+        if (first < end) {
+            int partitionIndex = partition(a, first, end);
+            if (partitionIndex == k - 1) {
+                return;
+            } else if (partitionIndex > k - 1) {
+                getTopKMinBySort(a, first, partitionIndex - 1, k);
+            } else {
+                getTopKMinBySort(a, partitionIndex + 1, end, k);
+            }
+        }
     }
 
 
