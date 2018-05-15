@@ -12,8 +12,8 @@ public class FindContinuousSequence {
 
     /**
      * 先假设一个最小值，一个最大值，然后进行计算结果，满足则循环加入list，最小值和最大值都++
-     * 如果和小于sum，则最大值++
-     * 如果和大于sum，则最小值++
+     * 如果和小于sum，则最大值++，即增加一个元素
+     * 如果和大于sum，则最小值++，即减少一个元素
      * @param sum
      * @return
      */
