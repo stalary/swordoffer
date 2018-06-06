@@ -24,11 +24,11 @@ public class ReConstructBinaryTree {
         if (ps > pe) {
             return null;
         }
-        // 根节点的值
+        // 根节点的值r
         int value = pre[ps];
         // 中序遍历中根节点的位置
         int index = is;
-        while (is < ie && in[index] != value) {
+        while (index < ie && in[index] != value) {
             index++;
         }
         // 开始构建二叉树

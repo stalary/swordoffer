@@ -1,6 +1,6 @@
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Permutation
@@ -23,8 +23,8 @@ public class Permutation {
      */
 
     public static void main(String[] args) {
-        String str = new String("159");
-        System.out.println(new Permutation().Permutation(str));
+        String str = new String("ab");
+        System.out.println(new Permutation().Permutation1(str));
     }
 
     public ArrayList<String> Permutation(String str) {
@@ -62,6 +62,31 @@ public class Permutation {
         char temp = chars[i];
         chars[i] = chars[j];
         chars[j] = temp;
+    }
+
+    public ArrayList<String> Permutation1(String str) {
+        ArrayList<String> ans = new ArrayList<>();
+        if (str.length() == 0) {
+            return ans;
+        }
+        char[] num = str.toCharArray();
+        // 首先存入第一个元素进行固定
+        ans.add("" + num[0]);
+        // 从第二个元素开始排序
+        for (int i = 1; i < num.length; ++i) {
+            ArrayList<String> lists = new ArrayList<>();
+            for (int j = 0; j <= i; ++j) {
+                for (String s : ans) {
+                    // 每次向不同的位置进行插入
+                    String pre = s.substring(0, j);
+                    String end = s.substring(j);
+                    String temp = pre + num[i] + end;
+                    lists.add(temp);
+                }
+            }
+            ans = lists;
+        }
+        return ans.stream().distinct().sorted().collect(Collectors.toCollection(ArrayList::new));
     }
 
 }

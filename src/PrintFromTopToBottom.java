@@ -7,7 +7,7 @@ import java.util.Queue;
  * PrintFromTopToBottom
  * <p>
  * 从上往下打印二叉树
- * 即为层序遍历
+ * 即层序遍历
  *
  * @author lirongqian
  * @since 2018/02/11

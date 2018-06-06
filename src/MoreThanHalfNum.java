@@ -11,7 +11,7 @@ public class MoreThanHalfNum {
 
     public static void main(String[] args) {
         System.out.println(new MoreThanHalfNum().MoreThanHalfNum_Solution(new int[]{
-                1, 2, 3, 2, 2, 2, 5, 4, 2
+                6, 5, 5
         }));
     }
 
@@ -28,13 +28,13 @@ public class MoreThanHalfNum {
         // 哨兵初始化步数1，元素为第一个元素
         int temp = 1;
         int result = array[0];
-        for (int i : array) {
+        for (int i = 1; i < array.length; i++) {
             // 步数为0时即切换哨兵
             if (temp == 0) {
-                result = i;
+                result = array[i];
             }
             // 相同时，哨兵前进，否则后退一步
-            if (result == i) {
+            if (result == array[i]) {
                 temp++;
             } else {
                 temp--;

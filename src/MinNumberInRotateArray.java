@@ -9,6 +9,12 @@
  */
 public class MinNumberInRotateArray {
 
+    public static void main(String[] args) {
+        System.out.println(new MinNumberInRotateArray().minNumberInRotateArray1(new int[] {
+                7,8,8,9,1,1,1,2,3
+        }));
+    }
+
     /**
      * 不断的缩小范围，最后找到最小值
      * <p>
