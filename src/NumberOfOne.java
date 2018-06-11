@@ -14,6 +14,7 @@ public class NumberOfOne {
         int count = 0;
         // 初始化
         int i = 1;
+        // 当前，后一个，前一个
         int current, after, before;
         while ((n / i) != 0) {
             // 当前位数字
