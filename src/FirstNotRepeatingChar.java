@@ -1,4 +1,3 @@
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -14,6 +13,7 @@ public class FirstNotRepeatingChar {
 
     public static void main(String[] args) {
         System.out.println(new FirstNotRepeatingChar().FirstNotRepeatingChar("aba"));
+        System.out.println();
     }
 
     public int FirstNotRepeatingChar(String str) {
@@ -23,6 +23,7 @@ public class FirstNotRepeatingChar {
             // 出现一次即加1
             a[d]++;
         }
+        // 按字符串的顺序进行查找
         for (int i = 0; i < c.length; i++) {
             // 当找到只出现一次的时候直接返回下标
             if (a[c[i]] == 1) {
@@ -45,4 +46,5 @@ public class FirstNotRepeatingChar {
         }
         return -1;
     }
+
 }
