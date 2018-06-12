@@ -5,6 +5,7 @@ import java.util.ArrayList;
  * FindContinuousSequence
  *
  * 和为S的连续正数序列
+ *
  * @author lirongqian
  * @since 2018/02/06
  */
