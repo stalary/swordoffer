@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 /**
  * FindContinuousSequence
- *
+ * <p>
  * 和为S的连续正数序列
  *
  * @author lirongqian
@@ -15,10 +15,11 @@ public class FindContinuousSequence {
      * 先假设一个最小值，一个最大值，然后进行计算结果，满足则循环加入list，最小值和最大值都++
      * 如果和小于sum，则最大值++，即增加一个元素
      * 如果和大于sum，则最小值++，即减少一个元素
+     *
      * @param sum
      * @return
      */
-    public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
+    public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
         ArrayList<ArrayList<Integer>> lists = new ArrayList<>();
         int small = 1;
         int big = 2;
