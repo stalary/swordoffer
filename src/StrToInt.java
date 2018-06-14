@@ -24,7 +24,7 @@ public class StrToInt {
         char[] chars = str.toCharArray();
         // 判断符号
         boolean flag = true;
-        // 字符串当前下标
+        // 字符串当前下标，判断正负
         int index = 0;
         if (chars[0] == '-') {
             flag = false;
@@ -37,6 +37,7 @@ public class StrToInt {
             if (chars[i] >= '0' && chars[i] <= '9') {
                 sum = sum * 10 + chars[i] - '0';
             } else {
+                // 非数字直接返回
                 return 0;
             }
         }
