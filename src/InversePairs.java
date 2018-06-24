@@ -9,6 +9,13 @@
  */
 public class InversePairs {
 
+    public static void main(String[] args) {
+        int[] array = new int[] {
+                9, 8, 7, 6, 4, 5, 1, 6
+        };
+        System.out.println(new InversePairs().InversePairs(array));
+    }
+
     public int InversePairs(int[] array) {
         if (array == null || array.length == 0) {
             return 0;
