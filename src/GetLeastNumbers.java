@@ -72,7 +72,6 @@ public class GetLeastNumbers {
         }
         a[end] = a[i];
         a[i] = key;
-        System.out.println(i);
         return i;
     }
 
