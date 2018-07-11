@@ -9,6 +9,11 @@
 public class DeleteDuplication {
 
 
+    /**
+     * 删除重复结点，直到找到不重复的为止
+     * @param head
+     * @return
+     */
     public ListNode deleteDuplication(ListNode head) {
         // 当仅有一个结点时，不会存在重复元素，直接返回
         if (head == null || head.next == null) {
