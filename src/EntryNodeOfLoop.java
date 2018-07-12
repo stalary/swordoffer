@@ -33,7 +33,7 @@ public class EntryNodeOfLoop {
         if (slow == null || fast == null) {
             return null;
         }
-        // 将fast指针重置，当与相遇点再次相遇时
+        // 将fast指针重置，当与相遇点再次相遇时，即为入口
         fast = head;
         while (fast != slow) {
             fast = fast.next;
