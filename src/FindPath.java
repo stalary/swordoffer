@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 /**
  * FindPath
- * <p>
  * 查找二叉树中和为某一值的路径
  *
  * @author lirongqian
