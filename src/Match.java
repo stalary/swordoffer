@@ -1,9 +1,9 @@
 
 /**
  * Match
- *
+ * <p>
  * 匹配字符串，一共两种模式.和*
- * 难度较大
+ *
  * @author lirongqian
  * @since 2018/02/02
  */
@@ -27,7 +27,7 @@ public class Match {
         }
         //模式第2个是*，且字符串第1个跟模式第1个匹配,分3种匹配模式；如不匹配，模式后移2位
         if (patternIndex + 1 < pattern.length && pattern[patternIndex + 1] == '*') {
-            if ((strIndex != str.length && pattern[patternIndex] == str[strIndex]) || (pattern[patternIndex] == '.' && strIndex != str.length)) {
+            if ((strIndex != str.length && pattern[patternIndex] == str[strIndex]) || (strIndex != str.length && pattern[patternIndex] == '.')) {
                 //模式后移2，视为x*匹配0个字符
                 return matchCore(str, strIndex, pattern, patternIndex + 2)
                         //视为模式匹配1个字符
