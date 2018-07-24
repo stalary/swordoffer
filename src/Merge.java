@@ -18,6 +18,7 @@ public class Merge {
         ListNode head;
         if (list1.val < list2.val) {
             head = list1;
+            // 跳过小的值直到末尾，进行返回
             head.next = Merge(list1.next, list2);
         } else {
             head = list2;
