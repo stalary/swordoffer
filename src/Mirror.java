@@ -16,8 +16,10 @@ public class Mirror {
         if (root == null) {
             return;
         }
+        // 递归左右子树
         Mirror(root.left);
         Mirror(root.right);
+        // 开始交换
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
