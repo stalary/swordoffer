@@ -32,7 +32,9 @@ public class PrintByZhi {
      */
     public ArrayList<ArrayList<Integer>> Print(TreeNode root) {
         int layer = 1;
+        // 奇数
         Stack<TreeNode> odd = new Stack<>();
+        // 偶数
         Stack<TreeNode> even = new Stack<>();
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         // 注意需要判空
