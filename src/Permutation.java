@@ -23,7 +23,7 @@ public class Permutation {
      */
 
     public static void main(String[] args) {
-        String str = new String("ab");
+        String str = new String("abcd");
         System.out.println(new Permutation().Permutation1(str));
     }
 
