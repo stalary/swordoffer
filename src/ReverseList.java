@@ -37,7 +37,7 @@ public class ReverseList {
             ListNode next = head.next;
             // 下一个节点等于前一个结点
             head.next = prev;
-            // 保存当前节点，代表上一个节点
+            // 保存当前节点，下一次代表上一个节点
             prev = head;
             // 将当前节点向后移动
             head = next;
