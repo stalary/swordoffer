@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * ThreeSum15
- * 三个数字想加等于0的集合
+ * 三个数字相加等于0的集合
  *
  * @author lirongqian
  * @since 2018/05/20
