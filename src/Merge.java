@@ -8,6 +8,16 @@
  */
 public class Merge {
 
+    public static void main(String[] args) {
+        ListNode root = new ListNode(3);
+        root.next = new ListNode(4);
+        root.next.next = new ListNode(5);
+        ListNode root1 = new ListNode(1);
+        root1.next = new ListNode(2);
+        root1.next.next = new ListNode(8);
+        System.out.println(new Merge().Merge(root, root1));
+    }
+
     public ListNode Merge(ListNode list1,ListNode list2) {
         if (list1 == null) {
             return list2;
@@ -15,15 +25,13 @@ public class Merge {
         if (list2 == null) {
             return list1;
         }
-        ListNode head;
-        if (list1.val < list2.val) {
-            head = list1;
+        if (list1.val <= list2.val) {
             // 跳过小的值直到末尾，进行返回
-            head.next = Merge(list1.next, list2);
+            list1.next = Merge(list1.next, list2);
+            return list1;
         } else {
-            head = list2;
-            head.next = Merge(list1, list2.next);
+            list2.next = Merge(list1, list2.next);
+            return list2;
         }
-        return head;
     }
 }
