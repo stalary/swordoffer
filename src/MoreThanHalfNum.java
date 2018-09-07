@@ -10,8 +10,8 @@
 public class MoreThanHalfNum {
 
     public static void main(String[] args) {
-        System.out.println(new MoreThanHalfNum().MoreThanHalfNum_Solution(new int[]{
-                6, 5, 5
+        System.out.println(new MoreThanHalfNum().moreThanHalfNumSolution(new int[]{
+                6, 4, 5, 4, 3, 2, 4, 4, 4
         }));
     }
 
@@ -21,7 +21,7 @@ public class MoreThanHalfNum {
      * @param array
      * @return
      */
-    public int MoreThanHalfNum_Solution(int[] array) {
+    public int moreThanHalfNumSolution(int[] array) {
         if (array == null || array.length < 1) {
             return 0;
         }
