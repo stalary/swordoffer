@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.stream.Collectors;
 
 /**
  * GetLeastNumbers
  * <p>
- * 最小的k个数
+ * 第k个最小的数
  *
  * @author lirongqian
  * @since 2018/02/16
@@ -28,7 +29,7 @@ public class GetLeastNumbers {
      * @param k
      * @return
      */
-    public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
+    public ArrayList<Integer> getLeastNumbersSolution(int[] input, int k) {
         ArrayList<Integer> result = new ArrayList<>();
         if (input == null || input.length < k || k == 0) {
             return result;
@@ -45,14 +46,13 @@ public class GetLeastNumbers {
                 maxHeap.offer(i);
             }
         }
-        result.addAll(maxHeap);
-        return result;
+        return new ArrayList<>(maxHeap);
     }
 
 
     /**
      * 使用快速排序过程法
-     * i > k - 1时,向左移动继续缩小范围
+     * i > k - 1时, 表示左侧超过了k个数，向左移动继续缩小范围
      * i < k - 1时，开始向右移动，增加
      * @param a
      * @param first
