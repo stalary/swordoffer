@@ -25,7 +25,7 @@ public class LeftRotateString {
             return "";
         }
         str += str;
-        // 从第n位开始街区
+        // 从第n位开始截取
         return str.substring(n, n + len);
     }
 }
