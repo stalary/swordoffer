@@ -35,6 +35,7 @@ public class MovingCount {
                 + helper(i, j - 1, rows, cols, flag, threshold)
                 + helper(i, j + 1, rows, cols, flag, threshold)
                 + 1;
+        // 因为一直向下或者向右移动，所以不需要回溯
     }
 
     /**
