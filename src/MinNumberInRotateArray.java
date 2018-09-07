@@ -44,7 +44,7 @@ public class MinNumberInRotateArray {
                 // 当mid等于high，则无法判断在哪一边，需要一个个判断
             } else if (array[mid] == array[high]) {
                 high = high - 1;
-                // 当mid小于high时，则代表最小值在mid的左边
+                // 当mid小于high时，则代表最小值在mid的左边，或者此时就是最小值
             } else {
                 high = mid;
             }
