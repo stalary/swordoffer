@@ -15,16 +15,44 @@ public class Permutation {
     /**
      * 首先将第一个元素与其他元素进行交换
      * 然后将被交换元素锁定，继续交换，即完成了全排序
-     *            abc
-     *    abc     bac      cba
+     * abc
+     * abc     bac      cba
      * abc  cba bac bca  cba  cab
+     *
      * @param
      * @return
      */
 
     public static void main(String[] args) {
-        String str = new String("abcd");
+        String str = "abcd";
         System.out.println(new Permutation().Permutation1(str));
+        /*char[] c = str.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        int len = c.length;
+        for (int i = 1; i <= len; i++) {
+            help1(c, 0, i, sb);
+        }*/
+    }
+
+    /**
+     * 将字符串拆分的组合
+     * @param c
+     * @param start
+     * @param len
+     * @param sb
+     */
+    public static void help1(char[] c, int start, int len, StringBuilder sb) {
+        if (len == 0) {
+            System.out.print(sb + " ");
+            return;
+        }
+        if (start == c.length) {
+            return;
+        }
+        sb.append(c[start]);
+        help1(c, start + 1, len - 1, sb);
+        sb.deleteCharAt(sb.length() - 1);
+        help1(c, start + 1, len, sb);
     }
 
     public ArrayList<String> Permutation(String str) {
