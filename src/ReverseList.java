@@ -1,8 +1,9 @@
 
 /**
- * ReverseList
+ * reverseList
  *
  * 反转链表
+ * 考察频率较高
  * @author lirongqian
  * @since 2018/02/12
  */
@@ -16,12 +17,12 @@ public class ReverseList {
         System.out.println(new ReverseList().reverse(root));
     }
 
-    public ListNode ReverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
         // 移动到倒数第二个元素，获取当前链表
-        ListNode node = ReverseList(head.next);
+        ListNode node = reverseList(head.next);
         // 下下个元素设置为当前结点(跳过末尾结点)
         head.next.next = head;
         // 断开与之前结点的关联
@@ -29,8 +30,8 @@ public class ReverseList {
         return node;
     }
 
-    // 倒置
     public ListNode reverse(ListNode head) {
+        // 保存上一个节点
         ListNode prev = null;
         while (head != null) {
             // 下一个结点
