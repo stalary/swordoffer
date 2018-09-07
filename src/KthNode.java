@@ -7,6 +7,14 @@
  */
 public class KthNode {
 
+    public static void main(String[] args) {
+        TreeNode node = new TreeNode(7);
+        node.left = new TreeNode(3);
+        node.right = new TreeNode(9);
+        node.left.left = new TreeNode(1);
+        System.out.println(new KthNode().KthNode(node, 2));
+    }
+
     /**
      * 二叉搜索的特点时左儿子小于根节点，右儿子大于根节点
      * 所以首先找到最左的结点即为第一个结点，最左结点的根节点为第二个结点，以此类推
