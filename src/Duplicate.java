@@ -48,6 +48,7 @@ public class Duplicate {
             if (index >= length) {
                 index -= length;
             }
+            // 代表重复，直接返回
             if (numbers[index] >= length) {
                 duplication[0] = index;
                 return true;
