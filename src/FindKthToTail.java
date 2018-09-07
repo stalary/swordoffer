@@ -42,25 +42,4 @@ public class FindKthToTail {
         }
         return slow;
     }
-
-    public ListNode FindKthToTail1(ListNode head,int k) {
-        if (head == null) {
-            return null;
-        }
-        ListNode node = head;
-        int len = 0;
-        // 首先求出链表的总长度，判断是否存在倒数第k个结点
-        while (node != null) {
-            node = node.next;
-            len++;
-        }
-        if (len < k) {
-            return null;
-        }
-        ListNode result = head;
-        for (int i = 0; i < len - k; i++) {
-            result = result.next;
-        }
-        return result;
-    }
 }
