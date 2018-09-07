@@ -10,7 +10,7 @@
  */
 public class GetUglyNumber {
 
-    public int GetUglyNumber_Solution(int index) {
+    public int getUglyNumber_Solution(int index) {
         // 1 2 3 4 5 6都是丑数，所以小于时直接返回
         if (index < 7) {
             return index;
