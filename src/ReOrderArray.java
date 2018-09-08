@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * ReOrderArray
@@ -7,6 +8,14 @@
  * @since 2018/02/13
  */
 public class ReOrderArray {
+
+    public static void main(String[] args) {
+        int[] array = new int[] {
+                3, 4, 2, 5, 6, 3
+        };
+        new ReOrderArray().reOrderArray(array);
+        System.out.println(Arrays.toString(array));
+    }
 
     /**
      * 利用类似于插入排序的思想
