@@ -8,6 +8,11 @@
  */
 public class ReverseSentence {
 
+    public static void main(String[] args) {
+        String word = "hello world";
+        System.out.println(new ReverseSentence().ReverseSentence(word));
+    }
+
     /**
      * 首先截取字符串，然后再进行倒置
      * @param str
