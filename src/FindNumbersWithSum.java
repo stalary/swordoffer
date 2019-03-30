@@ -31,7 +31,6 @@ public class FindNumbersWithSum {
                     min = i * (sum - i);
                     temp = i;
                 }
-
             }
             set.add(i);
         }
