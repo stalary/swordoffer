@@ -12,6 +12,7 @@ public class Find {
         int row = 0;
         int col = array[0].length - 1;
         while (col >= 0 && row < array.length) {
+            // 向上移动减小，向右移动增加
             if (target < array[row][col]) {
                 col--;
             } else if (target > array[row][col]) {
