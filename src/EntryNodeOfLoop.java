@@ -17,6 +17,7 @@ public class EntryNodeOfLoop {
         if (head == null) {
             return null;
         }
+        // 使用快慢指针的方式
         ListNode slow = head;
         ListNode fast = head;
         while (slow != null && fast != null) {
@@ -25,6 +26,7 @@ public class EntryNodeOfLoop {
             if (fast != null) {
                 fast = fast.next;
             }
+            // 相遇
             if (slow == fast) {
                 break;
             }
